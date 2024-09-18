@@ -18,17 +18,23 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="loginGoogle" element={<LoginGoogle />} />
-          <Route path="register" element={<Register />} />
-          <Route path="updateProfile" element={<UpdateProfile />} />
-          <Route path="viewProfile" element={<ViewProfile />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
+      <div>
+        <Header />
+
+          <Routes>
+            <Route path="/" element={<Home />}>
+              <Route index element={<Home />} />
+              <Route path="login" element={<Login />} />
+              <Route path="loginGoogle" element={<LoginGoogle />} />
+              <Route path="register" element={<Register />} />
+              <Route path="updateProfile" element={<UpdateProfile />} />
+              <Route path="viewProfile" element={<ViewProfile />} />
+              <Route path="*" element={<NoPage />} />
+            </Route>
+          </Routes>
+
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
