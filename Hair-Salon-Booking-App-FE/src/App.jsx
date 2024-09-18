@@ -11,6 +11,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 import ViewProfile from "./pages/ViewProfile";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import NoPage from "./pages/NoPage";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,14 +19,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Header />}>
+        <Route path="/" element={<Home />}>
           <Route index element={<Home />} />
-          <Route index element={<Footer />} />
           <Route path="login" element={<Login />} />
           <Route path="loginGoogle" element={<LoginGoogle />} />
           <Route path="register" element={<Register />} />
           <Route path="updateProfile" element={<UpdateProfile />} />
           <Route path="viewProfile" element={<ViewProfile />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
