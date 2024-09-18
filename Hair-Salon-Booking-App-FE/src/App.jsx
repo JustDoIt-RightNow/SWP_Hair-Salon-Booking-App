@@ -15,22 +15,21 @@ import Footer from "./components/Footer";
 function App() {
   const [count, setCount] = useState(0)
 
-  // return (
-  //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path="/" element={}>
-  //         <Route index element={} />
-  //         <Route index element={} />
-  //         <Route path="" element={} />
-  //         <Route path="" element={} />
-  //         <Route path="" element={} />
-  //         <Route path="" element={} />
-  //         <Route path="" element={} />
-  //         <Route path="" element={} />
-  //       </Route>
-  //     </Routes>
-  //   </BrowserRouter>
-  // );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Home />} />
+          <Route index element={<Footer />} />
+          <Route path="login" element={<Login />} />
+          <Route path="loginGoogle" element={<LoginGoogle />} />
+          <Route path="register" element={<Register />} />
+          <Route path="updateProfile" element={<UpdateProfile />} />
+          <Route path="viewProfile" element={<ViewProfile />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
